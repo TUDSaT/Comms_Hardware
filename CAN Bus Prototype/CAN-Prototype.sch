@@ -1,0 +1,267 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CAN-Prototype-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CAN Bus Prototype"
+Date "2018-04-18"
+Rev ""
+Comp "TU Darmstadt Space Technology e. V."
+Comment1 "Authors: Milenko Starcik, Ivo Weihert"
+Comment2 "Licensed under CERN v1.1"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR01
+U 1 1 5AD76B98
+P 5200 5050
+F 0 "#PWR01" H 5200 4800 50  0001 C CNN
+F 1 "GND" H 5200 4900 50  0000 C CNN
+F 2 "" H 5200 5050 50  0001 C CNN
+F 3 "" H 5200 5050 50  0001 C CNN
+	1    5200 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR02
+U 1 1 5AD76BB2
+P 5200 4150
+F 0 "#PWR02" H 5200 4000 50  0001 C CNN
+F 1 "+3.3V" H 5200 4290 50  0000 C CNN
+F 2 "" H 5200 4150 50  0001 C CNN
+F 3 "" H 5200 4150 50  0001 C CNN
+	1    5200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SN65HVD230 U2
+U 1 1 5AD771B6
+P 5200 2700
+F 0 "U2" H 5100 3100 50  0000 R CNN
+F 1 "SN65HVD230" H 5100 3000 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5200 2200 50  0001 C CNN
+F 3 "" H 5100 3100 50  0001 C CNN
+	1    5200 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5AD772B8
+P 5800 2500
+F 0 "R2" V 5880 2500 50  0000 C CNN
+F 1 "120" V 5800 2500 50  0000 C CNN
+F 2 "" V 5730 2500 50  0001 C CNN
+F 3 "" H 5800 2500 50  0001 C CNN
+	1    5800 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 5AD772E9
+P 5800 4850
+F 0 "R1" V 5880 4850 50  0000 C CNN
+F 1 "120" V 5800 4850 50  0000 C CNN
+F 2 "" V 5730 4850 50  0001 C CNN
+F 3 "" H 5800 4850 50  0001 C CNN
+	1    5800 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L SN65HVD230 U1
+U 1 1 5AD77157
+P 5200 4550
+F 0 "U1" H 5100 4950 50  0000 R CNN
+F 1 "SN65HVD230" H 5100 4850 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5200 4050 50  0001 C CNN
+F 3 "" H 5100 4950 50  0001 C CNN
+	1    5200 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 4150 5200 4250
+Wire Wire Line
+	5200 4950 5200 5050
+$Comp
+L +3V3 #PWR03
+U 1 1 5AD77737
+P 5200 2300
+F 0 "#PWR03" H 5200 2150 50  0001 C CNN
+F 1 "+3V3" H 5200 2440 50  0000 C CNN
+F 2 "" H 5200 2300 50  0001 C CNN
+F 3 "" H 5200 2300 50  0001 C CNN
+	1    5200 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5AD77753
+P 5200 3200
+F 0 "#PWR04" H 5200 2950 50  0001 C CNN
+F 1 "GND" H 5200 3050 50  0000 C CNN
+F 2 "" H 5200 3200 50  0001 C CNN
+F 3 "" H 5200 3200 50  0001 C CNN
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 2300 5200 2400
+Wire Wire Line
+	5200 3100 5200 3200
+Wire Wire Line
+	4800 2900 4800 3150
+Wire Wire Line
+	4800 3150 5200 3150
+Connection ~ 5200 3150
+Wire Wire Line
+	4800 4750 4800 5000
+Wire Wire Line
+	4800 5000 5200 5000
+Connection ~ 5200 5000
+Wire Wire Line
+	5650 2500 5650 4850
+Connection ~ 5650 2700
+Wire Wire Line
+	5950 2500 5950 4850
+Wire Wire Line
+	5650 4550 5600 4550
+Connection ~ 5650 4550
+Wire Wire Line
+	5600 2700 5650 2700
+Wire Wire Line
+	5950 2800 5600 2800
+Wire Wire Line
+	5600 4650 5950 4650
+Connection ~ 5950 4650
+Connection ~ 5950 2800
+Text Notes 6000 2550 0    60   ~ 0
+Termination resistor
+Text Notes 6000 4900 0    60   ~ 0
+Termination resistor
+Text Notes 4250 2950 0    60   ~ 0
+High speed
+Text Notes 4250 4800 0    60   ~ 0
+High speed
+NoConn ~ 4800 2800
+NoConn ~ 4800 4650
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5AD78BDE
+P 4400 3600
+F 0 "#FLG05" H 4400 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 4400 3750 50  0000 C CNN
+F 2 "" H 4400 3600 50  0001 C CNN
+F 3 "" H 4400 3600 50  0001 C CNN
+	1    4400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 5AD78BFA
+P 4050 3700
+F 0 "#FLG06" H 4050 3775 50  0001 C CNN
+F 1 "PWR_FLAG" H 4050 3850 50  0000 C CNN
+F 2 "" H 4050 3700 50  0001 C CNN
+F 3 "" H 4050 3700 50  0001 C CNN
+	1    4050 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR07
+U 1 1 5AD78C4A
+P 4050 3600
+F 0 "#PWR07" H 4050 3450 50  0001 C CNN
+F 1 "+3V3" H 4050 3740 50  0000 C CNN
+F 2 "" H 4050 3600 50  0001 C CNN
+F 3 "" H 4050 3600 50  0001 C CNN
+	1    4050 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 5AD78C66
+P 4400 3700
+F 0 "#PWR08" H 4400 3450 50  0001 C CNN
+F 1 "GND" H 4400 3550 50  0000 C CNN
+F 2 "" H 4400 3700 50  0001 C CNN
+F 3 "" H 4400 3700 50  0001 C CNN
+	1    4400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3600 4050 3700
+Wire Wire Line
+	4400 3600 4400 3700
+$Comp
+L Conn_01x02 J2
+U 1 1 5AD78D44
+P 4350 2700
+F 0 "J2" H 4350 2800 50  0000 C CNN
+F 1 "Conn_01x02" H 4350 2500 50  0000 C CNN
+F 2 "" H 4350 2700 50  0001 C CNN
+F 3 "" H 4350 2700 50  0001 C CNN
+	1    4350 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x02 J1
+U 1 1 5AD78D81
+P 4350 4550
+F 0 "J1" H 4350 4650 50  0000 C CNN
+F 1 "Conn_01x02" H 4350 4350 50  0000 C CNN
+F 2 "" H 4350 4550 50  0001 C CNN
+F 3 "" H 4350 4550 50  0001 C CNN
+	1    4350 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4550 2600 4800 2600
+Wire Wire Line
+	4800 2700 4550 2700
+Wire Wire Line
+	4550 4450 4800 4450
+Wire Wire Line
+	4800 4550 4550 4550
+Text Notes 3400 4500 0    60   ~ 0
+PyBoard1_CAN1_Tx
+Text Notes 3400 4600 0    60   ~ 0
+PyBoard1_CAN1_Rx
+Text Notes 3400 2650 0    60   ~ 0
+PyBoard2_CAN1_Tx
+Text Notes 3400 2750 0    60   ~ 0
+PyBoard2_CAN1_Rx
+$EndSCHEMATC
