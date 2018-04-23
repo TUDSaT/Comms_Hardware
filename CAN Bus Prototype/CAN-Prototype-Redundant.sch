@@ -1,0 +1,437 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CAN-Prototype-Redundant-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "CAN Bus Prototype Redundant"
+Date "2018-04-23"
+Rev ""
+Comp "TU Darmstadt Space Technology e. V."
+Comment1 "Authors: Milenko Starcik, Ivo Weihert"
+Comment2 "Licensed under CERN v1.1 OHL"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR01
+U 1 1 5AD76B98
+P 3750 5050
+F 0 "#PWR01" H 3750 4800 50  0001 C CNN
+F 1 "GND" H 3750 4900 50  0000 C CNN
+F 2 "" H 3750 5050 50  0001 C CNN
+F 3 "" H 3750 5050 50  0001 C CNN
+	1    3750 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR02
+U 1 1 5AD76BB2
+P 3750 4150
+F 0 "#PWR02" H 3750 4000 50  0001 C CNN
+F 1 "+3.3V" H 3750 4290 50  0000 C CNN
+F 2 "" H 3750 4150 50  0001 C CNN
+F 3 "" H 3750 4150 50  0001 C CNN
+	1    3750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SN65HVD230 U2
+U 1 1 5AD771B6
+P 3750 2700
+F 0 "U2" H 3650 3100 50  0000 R CNN
+F 1 "SN65HVD230" H 3650 3000 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3750 2200 50  0001 C CNN
+F 3 "" H 3650 3100 50  0001 C CNN
+	1    3750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5AD772B8
+P 4350 2500
+F 0 "R2" V 4430 2500 50  0000 C CNN
+F 1 "120" V 4350 2500 50  0000 C CNN
+F 2 "" V 4280 2500 50  0001 C CNN
+F 3 "" H 4350 2500 50  0001 C CNN
+	1    4350 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R1
+U 1 1 5AD772E9
+P 4350 4850
+F 0 "R1" V 4430 4850 50  0000 C CNN
+F 1 "120" V 4350 4850 50  0000 C CNN
+F 2 "" V 4280 4850 50  0001 C CNN
+F 3 "" H 4350 4850 50  0001 C CNN
+	1    4350 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L SN65HVD230 U1
+U 1 1 5AD77157
+P 3750 4550
+F 0 "U1" H 3650 4950 50  0000 R CNN
+F 1 "SN65HVD230" H 3650 4850 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 3750 4050 50  0001 C CNN
+F 3 "" H 3650 4950 50  0001 C CNN
+	1    3750 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4150 3750 4250
+Wire Wire Line
+	3750 4950 3750 5050
+$Comp
+L +3V3 #PWR03
+U 1 1 5AD77737
+P 3750 2300
+F 0 "#PWR03" H 3750 2150 50  0001 C CNN
+F 1 "+3V3" H 3750 2440 50  0000 C CNN
+F 2 "" H 3750 2300 50  0001 C CNN
+F 3 "" H 3750 2300 50  0001 C CNN
+	1    3750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5AD77753
+P 3750 3200
+F 0 "#PWR04" H 3750 2950 50  0001 C CNN
+F 1 "GND" H 3750 3050 50  0000 C CNN
+F 2 "" H 3750 3200 50  0001 C CNN
+F 3 "" H 3750 3200 50  0001 C CNN
+	1    3750 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2300 3750 2400
+Wire Wire Line
+	3750 3100 3750 3200
+Wire Wire Line
+	3350 2900 3350 3150
+Wire Wire Line
+	3350 3150 3750 3150
+Connection ~ 3750 3150
+Wire Wire Line
+	3350 4750 3350 5000
+Wire Wire Line
+	3350 5000 3750 5000
+Connection ~ 3750 5000
+Wire Wire Line
+	4200 2500 4200 4850
+Connection ~ 4200 2700
+Wire Wire Line
+	4500 2500 4500 4850
+Wire Wire Line
+	4200 4550 4150 4550
+Connection ~ 4200 4550
+Wire Wire Line
+	4150 2700 4200 2700
+Wire Wire Line
+	4500 2800 4150 2800
+Wire Wire Line
+	4150 4650 4500 4650
+Connection ~ 4500 4650
+Connection ~ 4500 2800
+Text Notes 4550 2550 0    60   ~ 0
+Termination resistor
+Text Notes 4550 4900 0    60   ~ 0
+Termination resistor
+Text Notes 2800 2950 0    60   ~ 0
+High speed
+Text Notes 2800 4800 0    60   ~ 0
+High speed
+NoConn ~ 3350 2800
+NoConn ~ 3350 4650
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 5AD78BDE
+P 2950 3600
+F 0 "#FLG05" H 2950 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 2950 3750 50  0000 C CNN
+F 2 "" H 2950 3600 50  0001 C CNN
+F 3 "" H 2950 3600 50  0001 C CNN
+	1    2950 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG06
+U 1 1 5AD78BFA
+P 2600 3700
+F 0 "#FLG06" H 2600 3775 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 3850 50  0000 C CNN
+F 2 "" H 2600 3700 50  0001 C CNN
+F 3 "" H 2600 3700 50  0001 C CNN
+	1    2600 3700
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3V3 #PWR07
+U 1 1 5AD78C4A
+P 2600 3600
+F 0 "#PWR07" H 2600 3450 50  0001 C CNN
+F 1 "+3V3" H 2600 3740 50  0000 C CNN
+F 2 "" H 2600 3600 50  0001 C CNN
+F 3 "" H 2600 3600 50  0001 C CNN
+	1    2600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 5AD78C66
+P 2950 3700
+F 0 "#PWR08" H 2950 3450 50  0001 C CNN
+F 1 "GND" H 2950 3550 50  0000 C CNN
+F 2 "" H 2950 3700 50  0001 C CNN
+F 3 "" H 2950 3700 50  0001 C CNN
+	1    2950 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 3600 2600 3700
+Wire Wire Line
+	2950 3600 2950 3700
+$Comp
+L Conn_01x02 J2
+U 1 1 5AD78D44
+P 2900 2700
+F 0 "J2" H 2900 2800 50  0000 C CNN
+F 1 "Conn_01x02" H 2900 2500 50  0000 C CNN
+F 2 "" H 2900 2700 50  0001 C CNN
+F 3 "" H 2900 2700 50  0001 C CNN
+	1    2900 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x02 J1
+U 1 1 5AD78D81
+P 2900 4550
+F 0 "J1" H 2900 4650 50  0000 C CNN
+F 1 "Conn_01x02" H 2900 4350 50  0000 C CNN
+F 2 "" H 2900 4550 50  0001 C CNN
+F 3 "" H 2900 4550 50  0001 C CNN
+	1    2900 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3100 2600 3350 2600
+Wire Wire Line
+	3350 2700 3100 2700
+Wire Wire Line
+	3100 4450 3350 4450
+Wire Wire Line
+	3350 4550 3100 4550
+Text Notes 1950 4500 0    60   ~ 0
+PyBoard1_CAN1_Tx
+Text Notes 1950 4600 0    60   ~ 0
+PyBoard1_CAN1_Rx
+Text Notes 1950 2650 0    60   ~ 0
+PyBoard2_CAN1_Tx
+Text Notes 1950 2750 0    60   ~ 0
+PyBoard2_CAN1_Rx
+$Comp
+L GND #PWR?
+U 1 1 5ADDF460
+P 8050 5050
+F 0 "#PWR?" H 8050 4800 50  0001 C CNN
+F 1 "GND" H 8050 4900 50  0000 C CNN
+F 2 "" H 8050 5050 50  0001 C CNN
+F 3 "" H 8050 5050 50  0001 C CNN
+	1    8050 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 5ADDF466
+P 8050 4150
+F 0 "#PWR?" H 8050 4000 50  0001 C CNN
+F 1 "+3.3V" H 8050 4290 50  0000 C CNN
+F 2 "" H 8050 4150 50  0001 C CNN
+F 3 "" H 8050 4150 50  0001 C CNN
+	1    8050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L SN65HVD230 U4
+U 1 1 5ADDF46C
+P 8050 2700
+F 0 "U4" H 7950 3100 50  0000 R CNN
+F 1 "SN65HVD230" H 7950 3000 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8050 2200 50  0001 C CNN
+F 3 "" H 7950 3100 50  0001 C CNN
+	1    8050 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5ADDF472
+P 8650 2500
+F 0 "R4" V 8730 2500 50  0000 C CNN
+F 1 "120" V 8650 2500 50  0000 C CNN
+F 2 "" V 8580 2500 50  0001 C CNN
+F 3 "" H 8650 2500 50  0001 C CNN
+	1    8650 2500
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 5ADDF478
+P 8650 4850
+F 0 "R3" V 8730 4850 50  0000 C CNN
+F 1 "120" V 8650 4850 50  0000 C CNN
+F 2 "" V 8580 4850 50  0001 C CNN
+F 3 "" H 8650 4850 50  0001 C CNN
+	1    8650 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L SN65HVD230 U3
+U 1 1 5ADDF47E
+P 8050 4550
+F 0 "U3" H 7950 4950 50  0000 R CNN
+F 1 "SN65HVD230" H 7950 4850 50  0000 R CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8050 4050 50  0001 C CNN
+F 3 "" H 7950 4950 50  0001 C CNN
+	1    8050 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4150 8050 4250
+Wire Wire Line
+	8050 4950 8050 5050
+$Comp
+L +3V3 #PWR?
+U 1 1 5ADDF486
+P 8050 2300
+F 0 "#PWR?" H 8050 2150 50  0001 C CNN
+F 1 "+3V3" H 8050 2440 50  0000 C CNN
+F 2 "" H 8050 2300 50  0001 C CNN
+F 3 "" H 8050 2300 50  0001 C CNN
+	1    8050 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5ADDF48C
+P 8050 3200
+F 0 "#PWR?" H 8050 2950 50  0001 C CNN
+F 1 "GND" H 8050 3050 50  0000 C CNN
+F 2 "" H 8050 3200 50  0001 C CNN
+F 3 "" H 8050 3200 50  0001 C CNN
+	1    8050 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 2300 8050 2400
+Wire Wire Line
+	8050 3100 8050 3200
+Wire Wire Line
+	7650 2900 7650 3150
+Wire Wire Line
+	7650 3150 8050 3150
+Connection ~ 8050 3150
+Wire Wire Line
+	7650 4750 7650 5000
+Wire Wire Line
+	7650 5000 8050 5000
+Connection ~ 8050 5000
+Wire Wire Line
+	8500 2500 8500 4850
+Connection ~ 8500 2700
+Wire Wire Line
+	8800 2500 8800 4850
+Wire Wire Line
+	8500 4550 8450 4550
+Connection ~ 8500 4550
+Wire Wire Line
+	8450 2700 8500 2700
+Wire Wire Line
+	8800 2800 8450 2800
+Wire Wire Line
+	8450 4650 8800 4650
+Connection ~ 8800 4650
+Connection ~ 8800 2800
+Text Notes 8850 2550 0    60   ~ 0
+Termination resistor
+Text Notes 8850 4900 0    60   ~ 0
+Termination resistor
+Text Notes 7100 2950 0    60   ~ 0
+High speed
+Text Notes 7100 4800 0    60   ~ 0
+High speed
+NoConn ~ 7650 2800
+NoConn ~ 7650 4650
+$Comp
+L Conn_01x02 J4
+U 1 1 5ADDF4C4
+P 7200 2700
+F 0 "J4" H 7200 2800 50  0000 C CNN
+F 1 "Conn_01x02" H 7200 2500 50  0000 C CNN
+F 2 "" H 7200 2700 50  0001 C CNN
+F 3 "" H 7200 2700 50  0001 C CNN
+	1    7200 2700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Conn_01x02 J3
+U 1 1 5ADDF4CA
+P 7200 4550
+F 0 "J3" H 7200 4650 50  0000 C CNN
+F 1 "Conn_01x02" H 7200 4350 50  0000 C CNN
+F 2 "" H 7200 4550 50  0001 C CNN
+F 3 "" H 7200 4550 50  0001 C CNN
+	1    7200 4550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7400 2600 7650 2600
+Wire Wire Line
+	7650 2700 7400 2700
+Wire Wire Line
+	7400 4450 7650 4450
+Wire Wire Line
+	7650 4550 7400 4550
+Text Notes 6250 4500 0    60   ~ 0
+PyBoard1_CAN2_Tx
+Text Notes 6250 4600 0    60   ~ 0
+PyBoard1_CAN2_Rx
+Text Notes 6250 2650 0    60   ~ 0
+PyBoard2_CAN2_Tx
+Text Notes 6250 2750 0    60   ~ 0
+PyBoard2_CAN2_Rx
+$EndSCHEMATC
