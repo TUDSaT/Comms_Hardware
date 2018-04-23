@@ -38,11 +38,11 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "CAN Bus Prototype"
-Date "2018-04-18"
+Date "2018-04-20"
 Rev ""
 Comp "TU Darmstadt Space Technology e. V."
 Comment1 "Authors: Milenko Starcik, Ivo Weihert"
-Comment2 "Licensed under CERN v1.1"
+Comment2 "Licensed under CERN v1.1 OHL"
 Comment3 ""
 Comment4 ""
 $EndDescr
